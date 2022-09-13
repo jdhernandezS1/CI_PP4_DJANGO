@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-01sa0\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com/']
-
+# ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com/']
+ALLOWED_HOSTS = ['https://git.heroku.com/pp4-django-app.git']
 
 # Application definition
 
