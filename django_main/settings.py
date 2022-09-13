@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-01sa0\
 DEBUG = True
 
 # ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com/']
-ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -82,9 +82,7 @@ WSGI_APPLICATION = 'django_main.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.parse('postgres://jhcdvyucsigxsw:\
-        539f4f5142f87a072bafe62719a93b94bf99b3172543ac13104d82c5e0d2b1aa@\
-            ec2-34-231-42-166.compute-1.amazonaws.com:5432/d6586fm59n3mvc')
+    'default': dj_database_url.parse('postgres://jhcdvyucsigxsw:539f4f5142f87a072bafe62719a93b94bf99b3172543ac13104d82c5e0d2b1aa@ec2-34-231-42-166.compute-1.amazonaws.com:5432/d6586fm59n3mvc')
 }
 
 # Password validation
