@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com/']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com','localhost']
 
 # Application definition
 
