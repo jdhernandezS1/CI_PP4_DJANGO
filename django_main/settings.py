@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os 
 import dj_database_url
-if os.path.isfile('env.py'):
-    import env
+# if os.path.isfile('env.py'):
+import env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -89,7 +89,8 @@ WSGI_APPLICATION = 'django_main.wsgi.application'
 #     }
 # }
 DATABASES = {
-    'default': dj_database_url.parse('postgres://jhcdvyucsigxsw:539f4f5142f87a072bafe62719a93b94bf99b3172543ac13104d82c5e0d2b1aa@ec2-34-231-42-166.compute-1.amazonaws.com:5432/d6586fm59n3mvc')
+    'default': os.environ.get('DATABASE_URL')
+    #   'default': dj_database_url.parse('postgres://jhcdvyucsigxsw:539f4f5142f87a072bafe62719a93b94bf99b3172543ac13104d82c5e0d2b1aa@ec2-34-231-42-166.compute-1.amazonaws.com:5432/d6586fm59n3mvc')
 }
 
 # Password validation
@@ -97,20 +98,16 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation\
-            .UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation\
-            .MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation\
-            .CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation\
-            .NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -133,12 +130,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-# MEDIA_URL = '/media/'
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
