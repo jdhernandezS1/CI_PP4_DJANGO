@@ -34,7 +34,6 @@ ALLOWED_HOSTS = ['pp4-django-app.herokuapp.com', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'login',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +42,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'login',
 ]
 
 MIDDLEWARE = [
