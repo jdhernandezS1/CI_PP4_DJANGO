@@ -23,5 +23,13 @@ urlpatterns = [
     path('', login_fc, name='login_fc'),
     path('register', register_fc, name='register'),
     path('edit/<item_id>', edit_item, name='edit'),
+<<<<<<< HEAD
     # path('accounts/',include('allauth.urls')),
+=======
+    path('accounts/',include('allauth.urls')),
+<<<<<<< HEAD
+>>>>>>> parent of ce92781 (Reverting commit)
 ]
+=======
+]
+>>>>>>> parent of 71d36b1 (config view Boostrap)
