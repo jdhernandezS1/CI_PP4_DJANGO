@@ -22,8 +22,4 @@ urlpatterns = [
     path('register', register_fc, name='register'),
     path('edit/<item_id>', edit_item, name='edit'),
     path('accounts/',include('allauth.urls')),
-<<<<<<< HEAD
 ]
-=======
-]
->>>>>>> parent of 71d36b1 (config view Boostrap)
