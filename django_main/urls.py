@@ -18,8 +18,10 @@ from login.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    # path('', include('login.urls'), name='login_urls'),
     path('', login_fc, name='login_fc'),
     path('register', register_fc, name='register'),
     path('edit/<item_id>', edit_item, name='edit'),
-    path('accounts/',include('allauth.urls')),
+    # path('accounts/',include('allauth.urls')),
 ]

@@ -1,15 +1,15 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
-from django.views.generic import ListView
+from django.views import generic
 from .models import Item
 from .forms import ItemForm
 # Create your views here.
 
 
-class PostList(ListView):
-    model = Item
-    queryset = Item.objects.filter(status=1).order_by('-created_on')
-    template_name = index.html
-    paginate_by = 6
+# class PostList(generic.ListView):
+#     model = Item
+#     # queryset = Item.objects.filter(done=False)# .order_by('-created_on')
+#     template_name = 'index.html'
+#     paginate_by = 6
 
 
 def login_fc(request):
