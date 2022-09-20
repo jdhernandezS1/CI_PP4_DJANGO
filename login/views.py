@@ -1,35 +1,17 @@
 from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
-<<<<<<< HEAD
 from django.views import generic
-=======
-<<<<<<< HEAD
-from django.views.generic import ListView
-=======
->>>>>>> parent of 71d36b1 (config view Boostrap)
->>>>>>> parent of ce92781 (Reverting commit)
 from .models import Item
 from .forms import ItemForm
 # Create your views here.
 
 
-<<<<<<< HEAD
 # class PostList(generic.ListView):
 #     model = Item
 #     # queryset = Item.objects.filter(done=False)# .order_by('-created_on')
 #     template_name = 'index.html'
 #     paginate_by = 6
-=======
-<<<<<<< HEAD
-class PostList(ListView):
-    model = Item
-    queryset = Item.objects.filter(status=1).order_by('-created_on')
-    template_name = index.html
-    paginate_by = 6
->>>>>>> parent of ce92781 (Reverting commit)
 
 
-=======
->>>>>>> parent of 71d36b1 (config view Boostrap)
 def login_fc(request):
     items = Item.objects.all()
     context = {
