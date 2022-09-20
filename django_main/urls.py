@@ -23,4 +23,5 @@ urlpatterns = [
     path('register', register_fc, name='register'),
     path('edit/<item_id>', edit_item, name='edit'),
     path('accounts/',include('allauth.urls')),
+    path('', include('blog.urls'),name='blog_urls'),
 ]
